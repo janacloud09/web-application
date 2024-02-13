@@ -3,6 +3,10 @@ pipeline {
     tools {
   maven 'Maven381'
 }
+ options {
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '3')
+}
+
     stages {
         stage('Clone the Repo from GitHub') {
             steps {
