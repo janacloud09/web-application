@@ -10,8 +10,8 @@ pipeline {
 }
  options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '3')
+  timestamps()
 }
-
     stages {
         stage('Clone the Repo from GitHub') {
             steps {
