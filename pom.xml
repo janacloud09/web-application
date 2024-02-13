@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>web-application war file</finalName>
+    <finalName>web-application</finalName>
   </build>
 </project>
