@@ -1,12 +1,10 @@
 pipeline {
     agent any
-
-    triggers {
-         cron 'H/1 * * * *'
-          }
-
     tools {
   maven 'Maven381'
+    triggers {
+       cron 'H/1 * * * *'
+           }
 }
  options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '3')
