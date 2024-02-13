@@ -2,10 +2,10 @@ pipeline {
     agent any
     tools {
   maven 'Maven381'
+    }
     triggers {
        cron 'H/1 * * * *'
            }
-}
  options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '3')
   timestamps()
@@ -21,10 +21,12 @@ pipeline {
                 sh ' mvn clean install '
             }
         }        
+    /*
     stage('Deploy war file to Tomcat7') {
             steps {
 deploy adapters: [tomcat7(credentialsId: 'tomat_user_password', path:'',url: 'http://65.0.176.170:8080')], contextPath: null, war: '**/*.war'
             }
         }    
+   */
     }
 }
