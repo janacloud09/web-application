@@ -20,7 +20,7 @@ pipeline {
         }      
     stage('Build the Code using Maven') {
             steps {
-                sh ' mvn install '
+                sh ' mvn clean install '
             }
         }        
     stage('Deploy war file to Tomcat7') {
