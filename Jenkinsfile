@@ -4,7 +4,7 @@ pipeline {
   maven 'Maven381'
     }
     triggers {
-       cron 'H/1 * * * *'
+       cron 'H/2 * * * *'
            }
  options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '3')
